@@ -1,0 +1,84 @@
+.nav {
+  background-color: #90998e;
+  height: 4rem;
+  /* margin-top: -4rem; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navContainer {
+  display: flex;
+  justify-content: space-between;
+  height: 4rem;
+  z-index: 1;
+  width: 100%;
+  padding: 0 2rem;
+  /* max-width: 1100px; */
+}
+
+.logo {
+  text-decoration: none;
+  justify-self: flex-start;
+  align-self: center;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  border: 2px solid white;
+  color: white;
+  padding: 0.2rem;
+  font-size: 1.4rem;
+}
+
+.icon {
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 2rem;
+  margin-top: -12.5px;
+}
+
+.icon img {
+  height: 25px;
+}
+
+.linkContainer {
+  list-style: none;
+  display: none;
+}
+
+.navItem {
+  cursor: pointer;
+  padding: 0.5rem 0;
+  /* border: 1px solid red; */
+}
+
+.navItem .active {
+  border-bottom: 2px solid green;
+}
+
+.linkScroll {
+  border-right: 1px solid white;
+  text-decoration: none;
+  color: white;
+  padding: 0 1rem;
+}
+
+.linkContainer .navItem:last-of-type .linkScroll {
+  border-right: none;
+}
+
+@media screen and (min-width: 680px) {
+  .icon {
+    display: none;
+  }
+
+  .linkContainer {
+    display: flex;
+    align-items: center;
+    text-align: center;
+  }
+}

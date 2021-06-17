@@ -1,9 +1,10 @@
-import './App.css';
+import Navbar from './components/Navbar';
+import Routes from './Routes';
 
 function App() {
   return (
-    <div className='App'>
-      <h1>home</h1>
+    <div>
+      <Routes />
     </div>
   );
 }
