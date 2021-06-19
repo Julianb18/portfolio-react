@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { Link as LinkRouter } from 'react-router-dom';
+// import { Link as LinkRouter } from 'react-router-dom';
 import { Link as LinkScroll } from 'react-scroll';
 
 import img from '../utils/icons/menu.png';
-import styles from '../styles/Navbar.module.css';
+import style from '../styles/Navbar.module.css';
 
 function Navbar() {
   const [isActive, setIsActive] = useState(false);
@@ -15,35 +15,53 @@ function Navbar() {
   console.log(isActive);
 
   return (
-    <nav className={styles.nav}>
-      <div className={styles.navContainer}>
-        <LinkRouter className={styles.logo}>JB</LinkRouter>
+    <nav className={style.nav}>
+      <div className={style.navContainer}>
+        <LinkScroll to='/' className={style.logo}>
+          JB
+        </LinkScroll>
 
-        <div className={styles.icon} onClick={handleClick}>
+        <div className={style.icon} onClick={handleClick}>
           <img src={img} alt='' />
         </div>
 
         <ul
-          className={`${styles.linkContainer}  
-          ${isActive ? styles.active : ''}`}
+          className={`${style.linkContainer}  
+          ${isActive ? style.active : ''}`}
         >
-          <li className={styles.navItem}>
-            <LinkScroll className={styles.linkScroll} to='/'>
+          <li className={style.navItem}>
+            <LinkScroll
+              to='/'
+              className={style.linkScroll}
+              onClick={handleClick}
+            >
               Home
             </LinkScroll>
           </li>
-          <li className={styles.navItem}>
-            <LinkScroll className={styles.linkScroll} to='/about'>
+          <li className={style.navItem}>
+            <LinkScroll
+              to='about'
+              className={style.linkScroll}
+              onClick={handleClick}
+            >
               About
             </LinkScroll>
           </li>
-          <li className={styles.navItem}>
-            <LinkScroll className={styles.linkScroll} to='/projects'>
+          <li className={style.navItem}>
+            <LinkScroll
+              to='projects'
+              className={style.linkScroll}
+              onClick={handleClick}
+            >
               Projects
             </LinkScroll>
           </li>
-          <li className={styles.navItem}>
-            <LinkScroll className={styles.linkScroll} to='/contact'>
+          <li className={style.navItem}>
+            <LinkScroll
+              to='contact'
+              className={style.linkScroll}
+              onClick={handleClick}
+            >
               Contact
             </LinkScroll>
           </li>

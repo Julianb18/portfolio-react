@@ -2,7 +2,7 @@ import React from 'react';
 
 function Projects() {
   return (
-    <div style={{ marginTop: '4rem' }}>
+    <div>
       <h2>Projects</h2>
     </div>
   );
