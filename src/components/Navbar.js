@@ -1,18 +1,18 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'
 // import { Link as LinkRouter } from 'react-router-dom';
-import { Link as LinkScroll } from 'react-scroll';
+import { Link as LinkScroll } from 'react-scroll'
 
-import img from '../utils/icons/menu.png';
-import style from '../styles/Navbar.module.css';
+import img from '../utils/icons/menu.png'
+import style from '../styles/Navbar.module.css'
 
 function Navbar() {
-  const [isActive, setIsActive] = useState(false);
+  const [isActive, setIsActive] = useState(false)
 
   const handleClick = () => {
-    setIsActive(!isActive);
-  };
+    setIsActive(!isActive)
+  }
 
-  console.log(isActive);
+  console.log(isActive)
 
   return (
     <nav className={style.nav}>
@@ -21,8 +21,15 @@ function Navbar() {
           JB
         </LinkScroll>
 
-        <div className={style.icon} onClick={handleClick}>
-          <img src={img} alt='' />
+        <div
+          onClick={handleClick}
+          className={`${style.btn} ${
+            isActive ? style.burgerActive : style.notActive
+          }`}
+        >
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
 
         <ul
@@ -68,7 +75,7 @@ function Navbar() {
         </ul>
       </div>
     </nav>
-  );
+  )
 }
 
-export default Navbar;
+export default Navbar

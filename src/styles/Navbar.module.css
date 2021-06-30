@@ -34,18 +34,140 @@
   z-index: 100;
 }
 
-.icon {
-  display: block;
+/* custom */
+
+.btn {
   position: absolute;
   top: 50%;
   right: 2rem;
-  margin-top: -12.5px;
+  margin-top: -10px;
+  width: 30px;
+  cursor: pointer;
+
   z-index: 100;
 }
 
-.icon img {
-  height: 25px;
+.btn span {
+  display: block;
+  width: 100%;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
+  border-radius: 3px;
+  height: 2px;
+  background-color: #fff;
+  transition: all 0.3s;
+  position: relative;
 }
+
+.btn span + span {
+  margin-top: 0.45rem;
+}
+
+.btn.burgerActive span:nth-child(1) {
+  animation: top 0.4s ease forwards;
+}
+
+.btn.notActive span:nth-child(1) {
+  animation: top2 0.4s ease forwards;
+}
+
+.btn.burgerActive span:nth-child(2) {
+  animation: scaled 0.4s ease forwards;
+}
+
+.btn.notActive span:nth-child(2) {
+  animation: scaled2 0.4s ease forwards;
+}
+
+.btn.burgerActive span:nth-child(3) {
+  animation: bottom 0.4s ease forwards;
+}
+
+.btn.notActive span:nth-child(3) {
+  animation: bottom2 0.4s ease forwards;
+}
+
+@keyframes top {
+  0% {
+    top: 0;
+    transform: rotate(0);
+  }
+  50% {
+    top: 9px;
+    transform: rotate(0);
+  }
+  100% {
+    top: 9px;
+    transform: rotate(45deg);
+  }
+}
+
+@keyframes top2 {
+  0% {
+    top: 9px;
+    transform: rotate(45deg);
+  }
+  50% {
+    top: 9px;
+    transform: rotate(0deg);
+  }
+  100% {
+    top: 0;
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes bottom {
+  0% {
+    bottom: 0;
+    transform: rotate(0);
+  }
+  50% {
+    bottom: 9px;
+    transform: rotate(0);
+  }
+  100% {
+    bottom: 9px;
+    transform: rotate(135deg);
+  }
+}
+
+@keyframes bottom2 {
+  0% {
+    bottom: 9px;
+    transform: rotate(135deg);
+  }
+  50% {
+    bottom: 9px;
+    transform: rotate(0);
+  }
+  100% {
+    bottom: 0;
+    transform: rotate(0);
+  }
+}
+
+@keyframes scaled {
+  50% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+
+@keyframes scaled2 {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* end of custom icon */
 
 .linkContainer {
   list-style: none;
@@ -77,7 +199,7 @@
   display: flex;
 }
 
-/*  dont forget this */
+/* TODO: dont forget this */
 .navItem .underline {
   border-bottom: 2px solid green;
 }
@@ -95,7 +217,7 @@
 }
 
 @media screen and (min-width: 680px) {
-  .icon {
+  .btn {
     display: none;
   }
 

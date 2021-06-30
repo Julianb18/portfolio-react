@@ -1,3 +1,109 @@
 .home {
-  /* min-height: 100vh; */
+  min-height: calc(100vh - 4rem);
+  padding: 1.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.homeWrapper {
+}
+
+.textContainer {
+}
+
+.subHeadContainer h4 {
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+.subHeadContainer h4::before {
+  display: inline-block;
+  content: '';
+  height: 2px;
+  width: 40px;
+  margin-right: 1rem;
+  background-color: black;
+  vertical-align: middle;
+}
+.headerContainer {
+  margin: 0.2rem 0 2rem 0;
+}
+
+.headerContainer h2 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.btnContainer button {
+  border: 2px solid black;
+  outline: unset;
+  padding: 0.8rem;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  width: 100%;
+  background-color: transparent;
+}
+.scrollContainer {
+  position: absolute;
+  bottom: 10%;
+  /* left: 0.5rem; */
+  transform: rotate(-90deg);
+}
+
+/* .scrollArrow {
+  width: 50px;
+  height: 2px;
+  transform: translateX(-0rem);
+  background-color: rgb(0, 0, 0);
+}
+.scrollArrow::before {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-top: 0px solid white;
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+  border-left: 0px solid white;
+  top: -5px;
+  left: -10px;
+  transform: rotate(135deg);
+} */
+
+.scrollContainer img {
+  width: 50px;
+  margin-left: -10px;
+  transform: rotate(180deg);
+  height: 30px;
+}
+
+.scrollContainer h4 {
+  margin-top: -15px;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+@media screen and (min-width: 680px) {
+  .home {
+  }
+  .homeWrapper {
+    display: flex;
+    border: 1px solid;
+    width: 100%;
+    justify-content: space-between;
+    max-width: 980px;
+  }
+  .btnContainer {
+    align-self: center;
+  }
+  .subHeadContainer h4 {
+    font-size: 1.2rem;
+  }
+  .headerContainer h2 {
+    font-size: 3rem;
+  }
 }
