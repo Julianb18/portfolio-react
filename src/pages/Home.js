@@ -20,14 +20,13 @@ function Home() {
         <div className={style.btnContainer}>
           <button>Latest Projects</button>
         </div>
-      </div>
-
-      <div className={style.scrollContainer}>
-        {/* <div className={style.relativeParent}> */}
-        {/* <div className={style.scrollArrow}></div> */}
-        <img src={arrow} alt='' />
-        <h4>Scroll</h4>
-        {/* </div> */}
+        <div className={style.scrollContainer}>
+          {/* <div className={style.relativeParent}> */}
+          {/* <i className={style.scrollArrow}></i> */}
+          <img src={arrow} alt='' />
+          <h4>Scroll</h4>
+          {/* </div> */}
+        </div>
       </div>
     </div>
   )
