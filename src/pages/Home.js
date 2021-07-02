@@ -9,7 +9,7 @@ function Home() {
       <div className={style.homeWrapper}>
         <div className={style.textContainer}>
           <div className={style.subHeadContainer}>
-            <h4>Hey</h4>
+            <span>Hey</span>
           </div>
           <div className={style.headerContainer}>
             <h2>I am Julian Braun.</h2>
