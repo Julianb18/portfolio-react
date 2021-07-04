@@ -7,9 +7,6 @@
   justify-content: center;
   padding: 4rem 1.4rem;
 }
-/* .aboutWrapper {
-  margin-top: 2rem;
-} */
 
 .leftContainer {
   margin-bottom: 5rem;
@@ -59,10 +56,10 @@
 @media screen and (min-width: 680px) {
   .about {
     align-items: center;
-    /* padding: 2rem 0 4rem 0; */
   }
   .aboutWrapper {
-    max-width: 730px;
+    width: 100%;
+    max-width: 980px;
   }
 
   .aboutContainer h3 {
@@ -80,25 +77,23 @@
   }
   .aboutWrapper {
     margin-top: 3rem;
-    max-width: 900px;
   }
 
   .aboutContainer {
     display: flex;
-    margin-top: unset;
-    max-width: unset;
-    width: 100%;
     justify-content: center;
+    width: 100%;
   }
 
   .title {
     margin-bottom: 4rem;
   }
   .leftContainer {
-    flex: 1;
+    flex: 1.2;
     margin-bottom: unset;
   }
   .rightContainer {
     flex: 1;
+    margin-left: 5rem;
   }
 }
